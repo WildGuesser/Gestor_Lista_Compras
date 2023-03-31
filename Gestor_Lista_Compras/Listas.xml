@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Listagem de Listas-->
+<ListasCompras>
+  <Listas>
+    <Lista Nome="lista1">
+      <Produto Nome="aaaaaa">
+        <Comprado>false</Comprado>
+        <Categoria>Padaria</Categoria>
+        <Quantidade>1</Quantidade>
+      </Produto>
+      <Produto Nome="bbbbbb">
+        <Comprado>false</Comprado>
+        <Categoria>Padaria</Categoria>
+        <Quantidade>2</Quantidade>
+      </Produto>
+      <Produto Nome="ccccc">
+        <Comprado>false</Comprado>
+        <Categoria>Padaria</Categoria>
+        <Quantidade>3</Quantidade>
+      </Produto>
+      <Produto Nome="ddddd">
+        <Comprado>false</Comprado>
+        <Categoria>Bazar</Categoria>
+        <Quantidade>3</Quantidade>
+      </Produto>
+    </Lista>
+    <Lista Nome="lista2">
+      <Produto Nome="AAAAAA">
+        <Comprado>false</Comprado>
+        <Categoria>Padaria</Categoria>
+        <Quantidade>31</Quantidade>
+      </Produto>
+      <Produto Nome="AAAAAAV">
+        <Comprado>false</Comprado>
+        <Categoria>Padaria</Categoria>
+        <Quantidade>32</Quantidade>
+      </Produto>
+      <Produto Nome="CARNE">
+        <Comprado>false</Comprado>
+        <Categoria>Mercearia</Categoria>
+        <Quantidade>32</Quantidade>
+      </Produto>
+    </Lista>
+  </Listas>
+</ListasCompras>

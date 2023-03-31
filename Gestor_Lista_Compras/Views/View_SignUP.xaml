@@ -1,0 +1,28 @@
+﻿<Window x:Class="Gestor_Lista_Compras.View_SignUP"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gestor_Lista_Compras"
+        mc:Ignorable="d"
+      Title="View_SignUP" Height="186" Width="434">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="138" VerticalAlignment="Top" Width="212" Margin="10,8,0,0">
+
+            <Label Content="Username" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Password" HorizontalAlignment="Left" Margin="4,32,0,0" VerticalAlignment="Top"/>
+            <Label Content="Mail" HorizontalAlignment="Left" Margin="31,72,0,0" VerticalAlignment="Top"/>
+            <Label Content="Pais" HorizontalAlignment="Left" Margin="33,110,0,0" VerticalAlignment="Top"/>
+
+
+            <TextBox x:Name="TB_User" HorizontalAlignment="Left" Margin="84,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="TB_Pass" HorizontalAlignment="Left" Margin="84,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="TB_Mail" HorizontalAlignment="Left" Margin="84,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="TB_Pais" HorizontalAlignment="Left" Margin="84,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        </Grid>
+        <Button x:Name="BT_Registar" Content="Registar" HorizontalAlignment="Left" Margin="310,49,0,0" VerticalAlignment="Top" Click="BT_Registar_Click"/>
+        <Button x:Name="BT_Sair" Content="Sair" HorizontalAlignment="Left" Margin="310,96,0,0" VerticalAlignment="Top" Width="47"/>
+
+    </Grid>
+</Window>

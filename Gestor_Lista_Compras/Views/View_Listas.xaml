@@ -1,0 +1,32 @@
+﻿<Window x:Class="Gestor_Lista_Compras.View_Listas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gestor_Lista_Compras"
+        mc:Ignorable="d"
+       Title="Listas" Height="382" Width="483" Loaded="Window_Loaded">
+    <Grid>
+        <ListView x:Name="LV_Listas"  Margin="0,31,0,47">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Nome da Lista" Width="344"   DisplayMemberBinding="{Binding NomeLista}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Menu x:Name="Menu_Listas" Height="30" VerticalAlignment="Top">
+            <MenuItem x:Name="MItem_" Header="Listas" Height="22" Width="50">
+                <MenuItem x:Name="mItem_adicionar" Header="Adicionar Lista" Height="22" Width="200" Click="mItem_adicionar_Click"/>
+
+                <MenuItem x:Name="mItem_editarNome" Header="Editar Nome" Height="22" Width="200" Click= "mItem_editarNome_Click"/>
+                <MenuItem x:Name="mItem_Guardar" Header="Guardar" Height="22" Width="200" Click="mItem_Guardar_Click"/>
+
+
+            </MenuItem>
+        </Menu>
+        <Button x:Name="BT_Abrir" Content="Abrir" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="120" Click="BT_Abrir_Click"/>
+        <Button x:Name="BT_Eliminar" Content="Eliminar" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Width="120" Click="BT_Eliminar_Click"/>
+
+    </Grid>
+</Window>
+

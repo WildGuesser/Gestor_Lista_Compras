@@ -1,0 +1,49 @@
+﻿<Window x:Name="AddItem1" x:Class="Gestor_Lista_Compras.AddItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gestor_Lista_Compras"
+        mc:Ignorable="d"
+        Title="Adicionar Item na Lista" Height="275" Width="628" Loaded="Window_Loaded" Closing="AddItem1_Closing">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Adicionar Item">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Nome" HorizontalAlignment="Left" Margin="56,10,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Categoria" HorizontalAlignment="Left" Margin="56,48,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Quantidade" HorizontalAlignment="Left" Margin="56,88,0,0" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="CB_Categoria" HorizontalAlignment="Left" Margin="174,52,0,0" VerticalAlignment="Top" Width="120" >
+                    </ComboBox>
+                    <Button x:Name="BT_Sair" Content="Sair" HorizontalAlignment="Left" Margin="242,159,0,0" VerticalAlignment="Top" Width="52" Click="BT_Sair_Click"/>
+                    <Button x:Name="BT_AddToList" Content="Adicionar Item na Lista" HorizontalAlignment="Left" Margin="26,159,0,0" VerticalAlignment="Top" Width="151" Click="BT_AddToList_Click"/>
+                    <TextBox x:Name="TB_Quantidade" HorizontalAlignment="Left" Margin="174,92,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="TB_Nome" HorizontalAlignment="Left" Margin="174,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Categorias">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="291*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="BT_Categoria" Content="Adicionar nova categoria" HorizontalAlignment="Left" Margin="344,89,0,0" VerticalAlignment="Top" Width="150" Click="BT_Categoria_Click" Grid.Column="1"/>
+                    <TextBox x:Name="TB_Nova_Categoria" HorizontalAlignment="Left" Margin="297,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Grid.Column="1"/>
+                    <Button x:Name="BT_Retirar_Categoria" Content="Retirar Categoria" HorizontalAlignment="Left" Margin="14,0,0,0" VerticalAlignment="Bottom" Click="BT_Retirar_Categoria_Click" Grid.Column="1"/>
+
+                    <ListView x:Name="LV_Categorias" SelectionMode="Single" Width="200" HorizontalAlignment="Left" Height="180" VerticalAlignment="Top" Grid.ColumnSpan="2">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Categoria" Width="200" DisplayMemberBinding="{Binding Path = Nome_Categoria}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+
+    </Grid>
+</Window>

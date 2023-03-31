@@ -1,0 +1,74 @@
+﻿<Window x:Name="View_Items1" x:Class="Gestor_Lista_Compras.View_Items"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gestor_Lista_Compras"
+        mc:Ignorable="d"
+        Title="View_Items" Height="417" Width="570" Loaded="Window_Loaded" Closing="View_Items1_Closing">
+    <Grid>
+        <ListView x:Name="LV_items" Margin="0,27,0,63">
+            <ListView.View>
+                <GridView ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <GridViewColumn>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding Path=Comprado}" />
+                            </DataTemplate>
+
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Nome" DisplayMemberBinding="{Binding Path = NomeItem}"/>
+                    <GridViewColumn Header="Quantidade" DisplayMemberBinding="{Binding Path=Quantidade}"/>
+                    <GridViewColumn Header="Categoria" DisplayMemberBinding="{Binding Path=Categoria}" />
+                </GridView>
+            </ListView.View>
+            <ListView.Resources>
+                <Style TargetType="TextBlock">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Comprado}" Value="True" >
+                            <Setter Property="TextDecorations" Value="Strikethrough" />
+                            <Setter Property="FontStyle" Value="Italic" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListView.Resources>
+            <ListView.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.ContainerStyle>
+                        <Style TargetType="{x:Type GroupItem}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate>
+                                        <Expander IsExpanded="True">
+                                            <Expander.Header>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding NomeItem}" FontWeight="Bold" VerticalAlignment="Bottom" />
+                                                    <TextBlock Text="{Binding ItemCount, StringFormat=(0)}" FontWeight="Bold" Margin="10,0,0,0" VerticalAlignment="Bottom" />
+                                                </StackPanel>
+                                            </Expander.Header>
+                                            <ItemsPresenter />
+                                        </Expander>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </GroupStyle.ContainerStyle>
+                </GroupStyle>
+            </ListView.GroupStyle>
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem x:Name="CM_EditarNome" Header="Editar" Click="CM_EditarNome_Click"/>
+                </ContextMenu>
+            </ListView.ContextMenu>
+        </ListView>
+
+        
+        
+        
+        <!--Buttons-->    <!--Buttons-->    <!--Buttons-->    <!--Buttons-->    <!--Buttons-->
+        <Button x:Name="Adicionar_Item" Content="Adicionar Item" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="Adicionar_Item_Click"/>
+        <Button x:Name="Remover_Item" Content="Remover Item" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Click="Remover_Item_Click"/>
+
+    </Grid>
+</Window>

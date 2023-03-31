@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--ListagemdeCategorias-->
+<ListaCategorias>
+  <Fixo>
+    <Categoria Nome="Padaria" />
+    <Categoria Nome="Bazar" />
+    <Categoria Nome="Mercearia" />
+    <Categoria Nome="Frios e laticinios" />
+    <Categoria Nome="Limpeza" />
+    <Categoria Nome="Ferragens" />
+    <Categoria Nome="Bricolage" />
+    <Categoria Nome="Automovel" />
+  </Fixo>
+  <NaoFixo />
+</ListaCategorias>
